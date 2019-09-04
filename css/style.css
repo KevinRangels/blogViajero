@@ -1,0 +1,617 @@
+/*--========================================
+ESCRITORIO(XL revisamos en 1366px en adelante)  
+===========================================*/
+
+*{
+    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Chewy', cursive; */
+}
+
+ul, ol{
+    list-style: none;
+}
+
+a:visited, a:link, a:focus, a:hover, a:active{
+    list-style: none;
+    text-decoration: none;
+}
+/*=============================================
+HEADER
+=============================================*/
+
+header{
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:5;
+	background: rgba(0,0,0,.5);
+}
+
+header .logotipo{
+	width:45%;
+}
+
+.redes ul li i{
+	width:35px;
+	line-height: 35px;
+	text-align:center;
+	cursor:pointer;
+}
+
+.redes ul li i.fa-facebook-f{
+	background: #1475E0;
+}
+
+.redes ul li i.fa-instagram{
+	background: #B18768;
+}
+
+
+.redes ul li i.fa-twitter{
+	background: #00A6FF;
+}
+
+
+.redes ul li i.fa-youtube{
+	background: #F95F62;
+}
+
+
+.redes ul li i.fa-snapchat-ghost{
+	background: #FF9052;
+}
+
+.fa-bars{
+	font-size:35px;
+}
+
+.fa-search, .fa-bars{
+	color:white;
+}
+
+.redesMovil{
+	position:fixed;
+	bottom:-10px;
+	left:50%;
+	z-index:10;
+	transform: translate(-50%, 0%);
+}
+
+/*=============================================
+BANNER
+=============================================*/
+
+.fade-slider{
+	position:fixed;
+	z-index:-1;
+	top:0;
+	left:0;
+}
+
+.bannerEstatico{
+	background:rgba(0,0,0,0);
+}
+.banner_texto{
+    position: absolute;
+    width: 50%;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+}
+.banner_texto h1{
+    font-family: 'Chevy', cursive;
+    font-size: 60px;
+}
+.banner_texto h5{
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 30px;
+}
+
+/*=============================================
+MENU
+=============================================*/
+
+.menu{
+    position:fixed;
+	top:0;
+	left:0;
+	z-index:100;
+	width:100%;
+	height:100%;
+	background: rgba(0,0,0,.8);
+	overflow-x:hidden;
+	font-weight:300;
+	display:none;
+	font-size:34px;
+	line-height:70px;
+}
+.btnClose{
+   position: absolute;
+   top: 100px;
+   right: 25%;
+   color: white; 
+}
+.menu .nav{
+    margin-top: 10%;
+}
+/*--======================================
+GRID CATEGORIAS
+==========================================*/
+.grid figure{
+    cursor: pointer;
+    position: relative;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-right: 8px solid white;
+    border-left: 8px solid white;
+    transition: 1s all;
+}
+.grid .columna1{
+    width: 40%;
+}
+.grid .photo1{
+    height: 400px;
+    background: url(../img/suramerica.jpg);
+    background-size: cover;
+    background-position: left;
+}
+.grid .photo2{
+    height: 300px;
+    background: url(../img/africa.jpg);
+    background-size: cover;
+    background-position: left;
+}
+.grid .photo3{
+    height: 300px;
+    background: url(../img/centroamerica.jpg);
+    background-size: cover;
+    background-position: left;
+}
+.grid .photo4{
+    height: 300px;
+    background: url(../img/europa.jpg);
+    background-size: cover;
+    background-position: left;
+}
+.grid .photo5{
+    height: 400px;
+    background: url(../img/norteamerica.jpg);
+    background-size: cover;
+    background-position: left;
+}
+.grid .photo6{
+    height: 200px;
+    background: url(../img/asia.jpg);
+    background-size: cover;
+    background-position: left;
+}
+.grid figure p{
+   position: absolute;
+   left: 0px;
+   bottom: -16px;
+   width: 100%;
+   background: rgba(0,0,0,.7);
+   color: white;
+   font-weight: 100;
+   font-size: 20px;
+}
+.grid figure p:hover{
+    background: rgba(255, 57, 190,.7);
+ }
+/*--======================================
+BREADCRUMB-CATEGORIAS 
+==========================================*/
+.breadcrumb-item+.breadcrumb-item::before {
+    position: relative;
+    background: url(../img/separador.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    padding-right: .5rem;
+    color: #6c757d;
+    content: url(../img/espacio.png);
+    width: 60px;
+    left: -10px;
+    line-height: 50px;
+}
+.breadcrumb-item.breadcrumb_inicio{
+    position: relative;
+    top: 13px;
+}
+ /*--======================================
+CONTENIDO  
+==========================================*/
+.articulo_img{
+    width: 100%;
+}
+.articulo_intro{
+    position: relative;
+}
+.articulo_fecha{
+    position: absolute;
+    right: 10px;
+    top: 0;
+    padding: 5px 10px;
+    color: #aaa;
+    font-size: 14px;
+    background: url(../img/globo.jpg);
+    background-size: cover;
+    background-position: center top;
+    height: 40px;
+}
+.articulo_fecha2{
+    top: 0;
+    left: 30px;
+    padding: 12px 32px;
+    color: #aaa;
+    font-size: 14px;
+    background: url(../img/globo.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 50px;
+}
+.page-item.active .page-link{
+    background: #FF39BE;
+    color: white;
+    border: 1px solid #bbb;
+}
+.page-link{
+    color: #777;
+}
+/*--======================================
+FOOTER
+==========================================*/
+footer{
+    background: black;
+}
+.footer_grid figure{
+    cursor: pointer;
+    position: relative;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+    border-right: 4px solid white;
+    border-left: 4px solid white;
+    transition: 1s all;
+}
+.footer_grid .columna1{
+    width: 40%;
+}
+.footer_grid .photo1{
+    height: 200px;
+    background: url(../img/suramerica.jpg);
+    background-size: cover;
+    background-position: left;
+}
+.footer_grid .photo2{
+    height: 100px;
+    background: url(../img/africa.jpg);
+    background-size: cover;
+    background-position: left;
+}
+.footer_grid .photo3{
+    height: 100px;
+    background: url(../img/centroamerica.jpg);
+    background-size: cover;
+    background-position: left;
+}
+.footer_grid .photo4{
+    height: 100px;
+    background: url(../img/europa.jpg);
+    background-size: cover;
+    background-position: left;
+}
+.footer_grid .photo5{
+    height: 200px;
+    background: url(../img/norteamerica.jpg);
+    background-size: cover;
+    background-position: left;
+}
+.footer_grid .photo6{
+    height: 200px;
+    background: url(../img/asia.jpg);
+    background-size: cover;
+    background-position: left;
+}
+.footer_grid figure p{
+   position: absolute;
+   left: 0px;
+   bottom: -16px;
+   width: 100%;
+   background: rgba(0,0,0,.7);
+   color: white;
+   font-weight: 100;
+   font-size: 15px;
+}
+.footer_grid figure p:hover{
+    background: rgba(255, 57, 190,.7);
+ }
+/*--======================================
+SCROLL UP
+==========================================*/
+#scrollUp{
+    bottom: 20px;
+    right: 20px;
+    width: 50px;    
+    height: 50px;
+    background: url(../img/flecha.jpg);
+}
+/*=============================
+PRELOAD          
+==============================*/
+#preload{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background: #333;
+}
+#preload_carga_porcentaje{
+    position: absolute;
+    color: white;
+    font-size: 22px;
+    width: 100%;
+    top: 52%;
+    text-align: center;
+}
+#preload_carga_linea{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    left: 0;
+    background: #666;
+}
+#preload_carga_relleno{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background: #999;
+}
+#preload_carga_estado{
+    position: absolute;
+    background: url(../img/loader.gif);
+    background-position: center;
+    top: 45%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+}
+
+/*--======================================
+TABLET HORIZONTAL (LG revisamos en 1024px)  
+==========================================*/
+@media (max-width:1199px) and (min-width:992px){
+    .menu .nav{
+        margin-top: 15%;
+    }
+    .banner_texto h1{
+        font-size: 40px;
+    }
+    .banner_texto h5{
+        font-size: 17px;
+    }
+}
+
+/*--=====================================
+TABLET VETICAL (MD revisamos en 768px)  
+=======================================*/
+@media (max-width:991px) and (min-width:768px){
+    header .logotipo{
+        width: 55%;
+    }
+    .menu .nav{
+        margin-top: 19%;
+    }
+    .banner_texto h1{
+        font-size: 30px;
+        margin-top: 40px;
+    }
+    .banner_texto h5{
+        font-size: 14px;
+    }
+    .btnClose{
+        left: 15%;
+        top: 40px; 
+     }
+     .grid figure p{
+        font-size: 18px;
+     }
+     .grid .photo1{
+        height: 300px;
+    }
+    .grid .photo2{
+        height: 200px;
+    }
+    .grid .photo3{
+        height: 200px;
+    }
+    .grid .photo4{
+        height: 200px;
+    }
+    .grid .photo5{
+        height: 300px;
+    }
+    .articulo_fecha{
+        top: -343px;
+    }
+    .articulo_fecha2{
+        top: -7px;
+        left: 15px;
+        padding: 7px 18px;
+        font-size: 11px;
+        height: 40px;
+    }
+    .articulo_titulo{
+        font-size: 20px;
+    }
+    .footer_grid figure{
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        border-right: 1px solid white;
+        border-left: 1px solid white;
+    }
+    .footer_grid figure p{
+        font-size: 11px;
+    }
+}
+
+/*--====================================
+MOVIL HORIZONTAL (SM revisamos en 576px)  
+=======================================*/
+@media (max-width:767px) and (min-width:576px){
+    header .logotipo{
+        width: 65%;
+    }
+    .fade-slider{
+        height: 72px;
+    }
+    .btnClose{
+        left: 15%;
+        top: 40px; 
+     }
+     .menu .nav{
+         margin-top: 25%;
+     }
+     .grid .columna1{
+        width: 50%;
+    }
+     .grid .photo1{
+        height: 200px;
+    }
+    .grid .photo2{
+        height: 200px;
+    }
+    .grid .photo3{
+        height: 200px;
+    }
+    .grid .photo4{
+        height: 200px;
+    }
+    .grid .photo5{
+        height: 200px;
+    }
+    .grid figure p{
+        font-size: 18px;
+     }
+    .breadcrumb-item+.breadcrumb-item::before {
+        width: 40px;
+        background-size: contain;
+    }
+    .breadcrumb-item{
+        font-size: 13px;
+    }
+   
+     .articulo_fecha{
+        top: -377px;
+    }
+    .articulo_fecha2{
+        top: 1px;
+        left: 15px;
+        padding: 8px 13px;
+        font-size: 13px;
+        height: 40px;
+    }
+    .articulo_titulo{
+        font-size: 20px;
+    }
+    .btn_Compartir .btn-group button, .btn_Compartir .btn-group button span{
+        font-size: 14px;
+        padding: 6px;
+    }
+    .opiniones{
+        font-size: 13px;
+    }
+
+}
+
+/*--================================
+MOVIL VERTICAL (revisamos en 320px)  
+==================================*/
+@media (max-width:575px){
+    header .logotipo{
+        width: 100%;
+    }
+    .fade-slider{
+        height: 54px;
+    }
+    .btnClose{
+        left: 5%;
+        top: 10px; 
+     }
+     .menu .nav{
+         margin-top: 25%;
+         font-size: 20px;
+         line-height: 40px;
+     }
+    .grid .columna1{
+        width: 50%;
+    }
+     .grid .photo1{
+        height: 120px;
+    }
+    .grid .photo2{
+        height: 120px;
+    }
+    .grid .photo3{
+        height: 120px;
+    }
+    .grid .photo4{
+        height: 120px;
+    }
+    .grid .photo5{
+        height: 120px;
+    }
+    .grid .photo6{
+        height: 120px;
+    }
+    .grid figure p{
+        font-size: 16px;
+     }
+     .articulo_titulo{
+         font-size:20px;
+     }
+     .breadcrumb-item+.breadcrumb-item::before {
+        width: 40px;
+        background-size: contain;
+    }
+    .breadcrumb-item.breadcrumb_inicio .breadcrumb-item.active{
+        font-size: 13px;
+    }
+     .articulo_fecha{
+        top: -227px;
+        font-size: 12px;
+        /* height: 35px; */
+    }
+    .articulo_breadcrumb{
+        display: none;
+    }
+    .articulo_fecha2{
+        margin-top: 4px;
+        left: 15px;
+        padding: 6px 9px;
+        font-size: 12px;
+        height: 30px;
+    }
+    .articulo_titulo{
+        font-size: 18px;
+    }
+    .articulo_description{
+        font-size: 14px;
+    }
+    .btn_Compartir .btn-group button, .btn_Compartir .btn-group button span{
+        font-size: 10px;
+        padding: 4px;
+    }
+    .opiniones{
+        font-size: 12px;
+    }
+    .form{
+        margin-bottom: 70px;
+    }
+}

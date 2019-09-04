@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Juanito Travel</title>
+    <link rel="icon" href="img/icono.jpg">
+
+    <!--=============================
+    PLUGINS DE CSS          
+    ==============================-->
+
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    
+    <!-- <link href="https://fonts.googleapis.com/css?family=Chewy|Open+Sans:300,400&display=swap" rel="stylesheet"> -->
+    
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="fonts/fontawesome5/web-fonts-with-css/css/fontawesome-all.css">
+
+    <!-- JQUERY SLIDER CSS -->
+    <link rel="stylesheet" href="css/plugin/jquery.jdSlider.css">
+
+    <!-- <script src="https://kit.fontawesome.com/ef87ffd06d.js"></script> -->
+
+    <!--=============================
+     PLUGINS DE JS        
+    ==============================-->
+
+    <!-- jQuery library -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+
+    <script src="lib/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
+    <script src="lib/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+    <script src="lib/bootstrap.min.js"></script>
+
+    <!-- JQUERY SLIDER JS -->
+    <script src="js/plugin/jquery.jdSlider-latest.js"></script>
+
+    <!-- PAGINATION  -->
+    <script src="js/plugin/pagination.min.js"></script>
+
+    <!-- SCROLLORAMA -->
+    <script src="js/plugin/jquery.superscrollorama.js"></script>
+    <script src="js/plugin/TweenMax.min.js"></script>
+
+    <!-- SCROLL UP -->
+    <script src="js/plugin/scrollUP.js"></script>
+    <script src="Js/plugin/jquery.easing.js"></script>
+
+
+
+</head>
+<body>
+<!--=============================
+PRELOAD          
+==============================-->
+<div id="preload">
+    <div id="preload_carga_porcentaje"></div>
+
+    <div id="preload_carga_linea">
+        <div id="preload_carga_relleno"></div>
+    </div>
+
+    <div id="preload_carga_estado"></div>
+</div>
+<!--=============================
+CABECERA          
+==============================-->
+<header class="container-fluid">
+    <div class="container p-0">
+        <div class="row">
+
+            <!-- LOGO -->
+            <div class="col-10 col-sm-11 col-md-8 col-lg-7 p-xl-0 pt-lg-2 pt-1">
+                <a href="index.html">
+                    <img src="img/logotipo-negativo.png" class="logotipo img-fluid" alt="logo de Juanito Travel">
+                </a>
+            </div>
+            
+            <!-- REDES SOCIALES -->
+            <div class="d-none d-md-block col-2 col-lg-3   redes">
+                <ul class=" d-flex justify-content-end pt-2 mt-1">
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-facebook-f lead  rounded-circle text-white mr-1"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-instagram lead  rounded-circle text-white mr-1"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-twitter lead  rounded-circle text-white mr-1"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-youtube lead  rounded-circle text-white mr-1"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-snapchat-ghost lead float-left rounded-circle text-white mr-1"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- BUSCADOR Y BOTON MENU -->
+            <div class="col-2 col-sm-1 col-md-2 col-lg-2  d-flex justify-content-end pt-2 mt-1">
+                <!-- BUSCADOR -->
+                <div class="d-none d-md-block pr-4 pr-lg-5 mt-1">
+                    <i class="fas fa-search lead" data-toggle="collapse" data-target="#buscador"></i>
+                </div>
+                
+                <!-- BOTON MENU -->
+                <div class="m-0 mt-sm-1 mt-md-0 pr-0 pr-sm-2 pr-lg-3">
+                    <i class="fas fa-bars lead "></i>
+                </div>
+            </div>
+
+            <!-- ENTRADA DEL BUSCADOR -->
+            <div id="buscador" class="collapse col-12">
+                <div class="input-group float-right w-50 pb-3">
+                    <input type="text" class="form-control" placeholder="Buscar">
+                    <div class="input-group-append">
+                        <span class="input-group-text">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </div>
+                </div>      
+            </div>
+
+
+
+        </div>
+    </div>
+
+</header>
+
+<!--=============================
+REDES SOCIALES PARA MOVIL          
+==============================-->
+<div class="d-block d-md-none redes redesMovil p-0 bg-white w-100 pt-2">
+        <ul class=" d-flex justify-content-center p-0 ">
+            <li>
+                <a href="#">
+                    <i class="fab fa-facebook-f lead  rounded-circle text-white mr-2 mr-sm-4"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-instagram lead  rounded-circle text-white mr-2 mr-sm-4"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-twitter lead  rounded-circle text-white mr-2 mr-sm-4"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-youtube lead  rounded-circle text-white mr-2 mr-sm-4"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-snapchat-ghost lead rounded-circle text-white mr-2 mr-sm-4"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+<!--=============================
+BANNER          
+==============================-->
+<div class="bannerEstatico">
+
+</div>
+
+    <section class="jd-slider fade-slider">
+        <div class="slide-inner">
+            <ul class="slide-area">
+                <li>
+                    <div class="banner_texto d-none d-md-block">
+                        <h1>Watch how we work</h1>
+                        <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae unde repellatas.</h5>
+                    </div>
+                    <img src="img/bannerGrande01.jpg" alt="Juanito Travel en el mar" class="img-fluid">
+                </li>
+            </ul>
+        </div>
+
+        <div class="controller d-none">
+            <a class="auto" href="#">
+                <i class="fas fa-play fa-xs"></i>
+                <i class="fas fa-pause fa-xs"></i>
+            </a>
+            <div class="indicate-area"></div>
+        </div>
+    </section>
+
+    
+
+<!-- BUSCADOR PARA MOVIL -->
+<div class="container-fluid d-block d-md-none bg-white">
+    <div class="input-group input-group-sm py-3">
+        
+        <input type="text" class="form-control" placeholder="Buscar">
+
+        <div class="input-group-append">
+            <span class="input-group-text"><i class="fas fa-search"></i></span>
+        </div>
+    </div>
+</div>
+<!--=============================
+MENU         
+==============================-->
+<div class="container-fluid menu">
+
+    <a href="#" class="btnClose">X</a>
+
+    <ul class="nav flex-column text-center">
+
+        <li class="nav-item">
+            <a class="nav-link  text-white" href="categorias.html">Mi viaje por Suramérica</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link  text-white" href="categorias.html">Mi viaje por Centroámerica</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link  text-white" href="categorias.html">Mi viaje por Norteamérica</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link  text-white " href="categorias.html">Mi viaje por Eurpa</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link  text-white " href="categorias.html">Mi viaje por Africa</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link  text-white " href="categorias.html">Mi viaje por Oceania</a>
+        </li>
+    </ul>
+</div>
+
+
+<!--=============================
+CONTENIDO BLOG         
+==============================-->
+<div class="container-fluid py-0 py-md-3 contenido_inicio">
+    <div class="container">
+
+        <!-- BREADCRUMB -->
+       <a href="categorias.html"><button class="d-block d-sm-none btn btn-info btn-sm mb-2">
+            Regresar
+        </button></a> 
+
+        <ul class="breadcrumb bg-white py-2 py-md-3 bread articulo_breadcrumb">
+            <li class="breadcrumb-item breadcrumb_inicio"><a href="index.html">Inicio</a></li>
+            <li class="breadcrumb-item "><a href="categorias.html">Mi viaje por Suramérica</a></li>
+            <li class="breadcrumb-item active">Type something here</li>
+
+
+
+        </ul>
+
+        <div class="row">
+            <!-- COLUMNA IZQUIERDA -->
+            <div class="col-12 col-md-8  col-lg-9 p-0 pr-lg-5">
+               <!-- ARTICULO 01 -->
+               <div class="container">
+                   <div class="d-flex">
+                        <div class="articulo_fecha2">30.09.2018</div>
+                        <h2 class="articulo_titulo text-right text-muted pl-3 pt-lg-2">Type something here lorem</h2>
+                    </div>
+                   <img src="/img/articulo.png" class="img-fluid my-3" alt="">
+                   <p class="articulo_description my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ipsam iusto nisi pariatur voluptatem! Omnis, porro! Ratione non culpa ullam vitae dolores impedit odit cupiditate qui? Porro dolores eum unde.
+                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis asperiores laborum quasi officia tempora, atque incidunt dolorum. Repellat assumenda eveniet culpa nobis eius laborum deserunt impedit voluptatum? Commodi, voluptatibus tempore?
+                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur doloremque placeat consequatur excepturi. Repudiandae magnam, totam incidunt repellendus, officia distinctio hic laudantium odit aliquam dolor temporibus maxime itaque neque repellat?
+                   </p>
+                   <!-- PUBLICIDAD -->
+                   <img src="img/ad04.png" class="img-fluid my-5" width="100%" alt="">
+
+                   <p class="articulo_description my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ipsam iusto nisi pariatur voluptatem! Omnis, porro! Ratione non culpa ullam vitae dolores impedit odit cupiditate qui? Porro dolores eum unde.
+                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis asperiores laborum quasi officia tempora, atque incidunt dolorum. Repellat assumenda eveniet culpa nobis eius laborum deserunt impedit voluptatum? Commodi, voluptatibus tempore?
+                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur doloremque placeat consequatur excepturi. Repudiandae magnam, totam incidunt repellendus, officia distinctio hic laudantium odit aliquam dolor temporibus maxime itaque neque repellat?
+                   </p>
+
+                    <p class="articulo_description my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ipsam iusto nisi pariatur voluptatem! Omnis, porro! Ratione non culpa ullam vitae dolores impedit odit cupiditate qui? Porro dolores eum unde.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis asperiores laborum quasi officia tempora, atque incidunt dolorum. Repellat assumenda eveniet culpa nobis eius laborum deserunt impedit voluptatum? Commodi, voluptatibus tempore?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur doloremque placeat consequatur excepturi. Repudiandae magnam, totam incidunt repellendus, officia distinctio hic laudantium odit aliquam dolor temporibus maxime itaque neque repellat?
+                        
+                    <!-- COMPARTIR EN REDES -->
+                    <div class="float-right my-3 btn_Compartir">
+                        <div class="btn-group">
+                            <button type="button" class="btn border-0 text-white" style="background: #1475E0">
+                                <span class="fab fa-facebook pr-1"></span>
+                                Facebook
+                                <span class="lead pl-1">3</span>
+                            </button>
+                        </div>
+
+                        <div class="btn-group">
+                            <button type="button" class="btn border-0 text-white" style="background: #00A6FF">
+                                <span class="fab fa-twitter pr-1"></span>
+                                Twitter
+                                <span class="lead pl-1">3</span>
+                            </button>
+                        </div>
+
+                        <div class="btn-group">
+                            <button type="button" class="btn border-0 text-white" style="background: #DD4D41">
+                                <span class="fab fa-google-plus pr-1"></span>
+                                Google
+                                <span class="lead pl-1">3</span>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <!-- AVANZAR - RETROCEDER -->
+                    <div class="clearfix"></div>
+                    <div class="d-md-flex justify-content-between my-3 d-none">
+                        <a href="articulos.html" class="p-2">Leer articulo anterior</a>
+                        <a href="articulos.html" class="p-2">Leer articulo siguiente</a>
+                    </div>
+
+                    <!-- DESLIZADOR DE ARTICULOS -->
+                    <section class="jd-slider articulo_deslizador my-4">
+                        <div class="slide-inner">
+                            <ul class="slide-area">
+                                <li class="px-3"> 
+                                    <a href="articulos.html" class="text-secondary">
+                                        <img class="img-fluid" src="img/articulo01.png" alt="">
+                                        <h6 class="py-2">Type something here</h6>
+                                    </a>
+                                    <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, debitis placeat culpa nobis deleniti modi perspiciatis natus saepe illo adipisci ea veniam assumenda unde.</p>
+                                </li>
+                                <li class="px-4"> 
+                                    <a href="articulos.html" class="text-secondary">
+                                        <img class="img-fluid" src="img/articulo02.png" alt="">
+                                        <h6 class="py-2">Type something here</h6>
+                                    </a>
+                                    <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, debitis placeat culpa nobis deleniti modi perspiciatis natus saepe illo adipisci ea veniam assumenda unde.</p>
+                                </li>
+                                <li class="px-4"> 
+                                    <a href="articulos.html" class="text-secondary">
+                                        <img class="img-fluid" src="img/articulo03.png" alt="">
+                                        <h6 class="py-2">Type something here</h6>
+                                    </a>
+                                    <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, debitis placeat culpa nobis deleniti modi perspiciatis natus saepe illo adipisci ea veniam assumenda unde.</p>
+                                </li>
+                                <li class="px-4"> 
+                                    <a href="articulos.html" class="text-secondary">
+                                        <img class="img-fluid" src="img/articulo04.png" alt="">
+                                        <h6 class="py-2">Type something here</h6>
+                                    </a>
+                                    <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, debitis placeat culpa nobis deleniti modi perspiciatis natus saepe illo adipisci ea veniam assumenda unde.</p>
+                                </li>
+                            </ul>
+
+                            <a href="#" class="prev">
+                                <i class="fas fa-angle-left text-muted"></i>
+                            </a>
+
+                            <a href="#" class="next">
+                                <i class="fas fa-angle-right text-muted"></i>
+                            </a>
+                        </div>
+                        <div class="controller">
+                            <div class="indicate-area"></div>
+                        </div>
+                    </section>
+
+                
+                    </p>
+               <!-- BLOQUE DE OPINIONES            -->
+               <h3 style="color: #8E4876">Opiniones</h3>
+               <hr style="border: 1px solid #79FF39">
+               
+               <div class="row opiniones">
+                    <div class="p-2 col-4 col-lg-2">
+                        <img src="img/user01.jpg" alt="" class="img-thumbnail">
+                    </div>
+                <div class="p-2 col-8 col-lg-10  text-muted">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse velit officiis molestias quia iusto earum assumenda hic, est doloribus id quae laborum nisi ab exercitationem? Exercitationem aliquam porro consequuntur sapiente.</p>
+                    <span class="small float-right">Carla Gómez | 20.09.2018</span>
+                </div>
+              
+                   
+                    <div class="p-2 col-8 col-lg-10 text-muted">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse velit officiis molestias quia iusto earum assumenda hic, est doloribus id quae laborum nisi ab exercitationem? Exercitationem aliquam porro consequuntur sapiente.</p>
+                        <span class="small float-right">Juanito Travel | 20.09.2018</span>
+                    </div>
+
+                    <div class="p-2 col-4 col-lg-2">
+                        <img src="img/user02.jpg" alt="" class="img-thumbnail">
+                    </div>
+                </div>
+
+                <hr style="border: 1px solid #79FF39">
+
+                <!-- FORMULARIO DE OPINIONES -->
+                <form action="" class="form">
+                    <label class="text-muted lead">¿Qué tal te pareció el artículo?</label>
+                    <div class="row">
+                        <div class="col-12 col-md-8 col-lg-9">
+                            <div class="input-group-lg">
+                                <input type="text" class="form-control my-3" placeholder="Tu nombre">
+                                <input type="text" class="form-control my-3" placeholder="Tu email">
+
+                            </div>
+                        </div>
+                        <div class="d-none d-md-block col-md-4 col-lg-3">
+                            <img src="img/subirFoto.png" alt="" class="img-fluid mt-md-3 mt-lg-3 mt-xl-2">
+                        </div>
+
+                    </div>
+                    <textarea class="form-control my-3" rows="7" placeholder="Escribe aquí tu mensaje"></textarea>
+                    <input  type="submit" class="btn btn-dark btn-lg btn-block" value="Enviar">
+                </form>
+
+               
+                </div>
+            </div>
+            <!-- COLUMNA DERECHA -->
+            <div class="d-none d-md-block pt-md-4 pt-lg-0 col-md-4 col-lg-3">
+                <!-- SOBRE MI -->
+                
+
+                 <!-- PUBLICIDAD -->
+                 <div class="ads mb-4">
+                        <img src="img/ad03.png" class="img-fluid my-1" alt="">
+                </div>
+                <!-- COMENTARIOS RECIENTES -->
+               <div class="my-4">
+                   <h4>Artículos relacionados</h4>
+                    <div class="d-flex mb-3">
+                        <div class="w-100 pr-3 ">
+                            <a href="articulos.html"><img src="img/com01.jpg" class="img-fluid" alt=""></a>
+                        </div>
+                        <div>
+                            <a href="articulos.html"><p class="small text-secondary"> beatae nobis amet magni reiciendis molestiae repellendus error vel aperiam eligendi praesentium eum.</p></a>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-3">
+                        <div class="w-100 pr-3 ">
+                            <a href="articulos.html"><img src="img/com02.jpg" class="img-fluid" alt=""></a>
+                        </div>
+                        <div>
+                            <a href="articulos.html"><p class="small text-secondary"> beatae nobis amet magni reiciendis molestiae repellendus error vel aperiam eligendi praesentium eum.</p></a>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-3">
+                        <div class="w-100 pr-3 ">
+                            <a href="articulos.html"><img src="img/com03.jpg" class="img-fluid" alt=""></a>
+                        </div>
+                        <div>
+                            <a href="articulos.html"><p class="small text-secondary"> beatae nobis amet magni reiciendis molestiae repellendus error vel aperiam eligendi praesentium eum.</p></a>
+                        </div>
+                    </div>
+               </div>
+                <!-- PUBLICIDAD -->
+                <div class="ads my-4">
+                        <img src="img/ad02.jpg" class="img-fluid my-1" alt="">
+                </div>
+                 <!-- PUBLICIDAD -->
+                 <div class="ads my-4">
+                        <img src="img/ad05.png" class="img-fluid my-1" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--=============================
+FOOTER       
+==============================-->
+<footer class="container-fluid  py-5 d-none d-md-block footer_grid">
+    <div class="container">
+        <div class="row">
+
+            <!-- GRID CATEGORIAS FOOTER -->
+            <div class="col-md-7 col-lg-6">
+                <div class="p-1 bg-white footer_grid">
+
+                    <div class="container p-0">
+                
+                        <div class="d-flex">
+                
+                            <div class="d-flex flex-column columna1">
+                            
+                                <figure class="p-2 photo1 m-0" vinculo="categorias.html">
+                                    <p class="text-uppercase p-0 p-md-2 p-xl-1">Suramérica</p>
+                                </figure>
+                
+                                <figure class="p-2 photo2 m-0"  vinculo="categorias.html">
+                                    <p class="text-uppercase p-0 p-md-2 p-xl-1">Africa</p>
+                                </figure>
+                
+                            </div>
+                
+                            <div class="d-flex flex-column flex-fill columna2">
+                
+                                <div class="d-block d-md-flex">
+                
+                                    <figure class="p-2 flex-fill photo3 m-0" vinculo="categorias.html">
+                                        <p class="text-uppercase p-0 p-md-2 p-xl-1">Centroamérica</p>   
+                                    </figure>
+                
+                                    <figure class="p-2 flex-fill photo4 m-0" vinculo="categorias.html">
+                                        <p class="text-uppercase p-0 p-md-2 p-xl-1">Europa</p>
+                                    </figure>
+                
+                                </div>
+                
+                                <figure class="p-2 photo5 m-0" vinculo="categorias.html">
+                                     <p class="text-uppercase p-0 p-md-2 p-xl-1">Norteamérica</p>
+                                </figure>
+                
+                            </div>
+                
+                        </div>
+                
+                    </div>
+                
+                </div>
+            </div>
+            <div class="d-none d-lg-block col-xl-2 col-lg-1"></div>
+            <!-- NEWLETTER -->
+            <div class="col-md-5 col-lg-5 col-xl-4 pt-5">
+                <h6 class="text-white">Inscribite en nuestro newletter:</h6>
+                <div class="input-group my-4">
+                    <input type="text" class="form-control" placeholder="Ingresa tu Email">
+                    <div class="input-group-append">
+                        <span class="input-group-text bg-dark text-white">Inscribirse</span>
+                    </div>
+                </div>
+
+                <div class="  p-0  w-100 pt-2">
+                    <ul class=" d-flex justify-content-left p-0 ">
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-facebook-f lead  text-white mr-2 mr-sm-4"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-instagram lead  text-white mr-2 mr-sm-4"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-twitter lead  text-white mr-2 mr-sm-4"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-youtube lead  text-white mr-2 mr-sm-4"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-snapchat-ghost lead text-white mr-2 mr-sm-4"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
